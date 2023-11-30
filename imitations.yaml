@@ -1,0 +1,47 @@
+01-beatus-vir:
+  Cantus: [8, 66] [100, 120] [126, 134] [146, 156] [164, 178] [182, 192] [218, 228]
+  Altus: [0, 58] [96, 116] [124, 132] [154, 164] [166, 180] [186, 196] [222, 232]
+
+02-beatus-homo:
+  Cantus: [8, 20] [50, 84] [98, 114] [142, 148] [154, 160] [162, 170] [194, 218] [222, 240] [242, 258]
+  Altus: [0, 12] [42, 76] [110, 122] [138, 144] [150, 156] [160, 170] [198, 222] [226, 242] [244, 260]
+
+03-oculus-non-vidit:
+  Cantus: [0, 20] []
+  Altus: []
+
+04-justus-cor-suum-tradet:
+  Cantus: []
+  Altus: []
+
+05-exspectatio-justorum:
+  Cantus: []
+  Altus: []
+
+06-qui-sequitur-me:
+  Cantus: []
+  Altus: []
+
+07-justi-tulerunt-spolia:
+  Tenor: []
+  Bassus: []
+
+08-sancti-mei:
+  Tenor: []
+  Bassus: []
+
+09-qui-vult-venire-post-me:
+  Tenor: []
+  Bassus: []
+
+10-serve-bone:
+  Tenor: []
+  Bassus: []
+
+11-fulgebunt-justi:
+  Tenor: []
+  Bassus: []
+
+12-sicut-rosa:
+  Tenor: []
+  Bassus: []
