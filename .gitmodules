@@ -1,0 +1,3 @@
+[submodule "lassus-bicinia"]
+	path = lassus-bicinia
+	url = https://github.com/MirkoSattig/lassus-bicinia.git
