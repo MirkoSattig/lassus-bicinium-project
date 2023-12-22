@@ -70,8 +70,8 @@ getFiles(pathToKernScores).forEach(file => {
                 }
             }
             if (startLineIndex && endLineIndex) {
-                const startLine = startLineIndex + 2;
-                const endLine = endLineIndex + 2;
+                const startLine = startLineIndex + 1;
+                const endLine = endLineIndex + 1;
 
                 const cadenceKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
                 const cadenceFilename = `${uuidv5(cadenceKern, UUID_NAMESPACE)}.krn`;

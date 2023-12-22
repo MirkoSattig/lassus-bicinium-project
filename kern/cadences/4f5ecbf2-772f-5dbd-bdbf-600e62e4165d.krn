@@ -1,0 +1,22 @@
+**kern	**text	**kern	**text
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=9	=9	=9	=9
+4d	.	4b]	.
+4c	.	4a	.
+4c	.	1a	.
+8B	.	.	.
+8A	.	.	.
+2.B	.	.	.
+.	.	2g#i	-bi-
+4B	-bi-	.	.
+=10	=10	=10	=10
+1A	-tur,	[1a	-tur,
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
