@@ -55,7 +55,6 @@ getFiles(pathToKernScores).forEach(file => {
 
     const kern = fs.readFileSync(file, 'utf8');
     const referenceRecords = parseHumdrumReferenceRecords(kern);
-    console.log(referenceRecords);
 
     const config = {
         id,
