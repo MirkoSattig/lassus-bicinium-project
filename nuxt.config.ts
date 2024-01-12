@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@pinia/nuxt',
   ],
+  vite: {
+    optimizeDeps: {
+      exclude: ['verovio']
+    }
+  },
   content: {
     // ... options
     sources: {
