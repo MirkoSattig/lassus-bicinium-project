@@ -60,6 +60,8 @@ getFiles(pathToKernScores).forEach(file => {
     const config = {
         id,
         nr: parseInt(referenceRecords.ONM, 10),
+        title: referenceRecords['OTL@@LA'],
+        localRawFile: `/kern/lassus-bicinia/${id}.krn`,
     };
 
     const configFilename = `${id}.yaml`;
