@@ -5,8 +5,28 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir:"src/",
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss',
   ],
+  vite: {
+    optimizeDeps: {
+      exclude: ['verovio']
+    }
+  },
+  nitro: {
+    publicAssets: [
+      {
+        baseURL: 'kern/lassus-bicinia',
+        dir: fileURLToPath(new URL('./lassus-bicinia/kern', import.meta.url)),
+        maxAge: 3600,
+      },
+      {
+        baseURL: 'kern',
+        dir: fileURLToPath(new URL('./kern', import.meta.url)),
+      },
+    ],
+  },
   content: {
     // ... options
     sources: {
