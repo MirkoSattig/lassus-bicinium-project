@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       {
-        baseURL: 'lassus-bicinia',
+        baseURL: 'kern/lassus-bicinia',
         dir: fileURLToPath(new URL('./lassus-bicinia/kern', import.meta.url)),
         maxAge: 3600,
       },
