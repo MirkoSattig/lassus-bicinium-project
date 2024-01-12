@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7",
     "verovio": "^4.1.0",
     "vue-verovio-canvas": "^1.4.0"
   }

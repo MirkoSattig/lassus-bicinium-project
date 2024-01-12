@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir:"src/",
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@pinia/nuxt',
   ],
   content: {
     // ... options
