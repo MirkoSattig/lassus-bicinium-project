@@ -13,6 +13,19 @@ export default defineNuxtConfig({
       exclude: ['verovio']
     }
   },
+  nitro: {
+    publicAssets: [
+      {
+        baseURL: 'lassus-bicinia',
+        dir: fileURLToPath(new URL('./lassus-bicinia/kern', import.meta.url)),
+        maxAge: 3600,
+      },
+      {
+        baseURL: 'kern',
+        dir: fileURLToPath(new URL('./kern', import.meta.url)),
+      },
+    ],
+  },
   content: {
     // ... options
     sources: {
