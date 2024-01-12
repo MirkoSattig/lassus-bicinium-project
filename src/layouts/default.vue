@@ -1,7 +1,7 @@
 <template>
     <div>
         <NuxtLink to="/">Startseite</NuxtLink>
-        <NuxtLink to="/">About</NuxtLink>
+        <NuxtLink to="/">Über das Projekt</NuxtLink>
         <NuxtLink to="/bicinium">Bicinien</NuxtLink>
         <NuxtLink to="/cadences">Kadenzen</NuxtLink>
     </div>
