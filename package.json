@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
-    "verovio": "^4.1.0"
+    "verovio": "^4.1.0",
+    "vue-verovio-canvas": "^1.4.0"
   }
 }
