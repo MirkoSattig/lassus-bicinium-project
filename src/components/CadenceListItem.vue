@@ -25,7 +25,7 @@ const location = `T. ${Math.ceil(props.cadence.endBeat / 8)} ♩ ${(props.cadenc
 
 <template>
     <Card :title="location">
-        <template v-slot:title v-if="!shortTitle">
+        <template v-slot:title>
             <div class="flex items-center">
                 <div class="flex items-start justify-between w-full">
                     <div class="pl-3 w-full">
