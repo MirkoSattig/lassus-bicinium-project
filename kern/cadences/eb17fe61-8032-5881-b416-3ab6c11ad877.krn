@@ -1,21 +1,15 @@
 **kern	**text	**kern	**text
 *I"Bassus	*	*I"Tenor	*
-*I'A	*	*I'C	*
+*I'B	*	*I'T	*
 *clefF4	*	*clefGv2	*
 *k[b-]	*	*k[b-]	*
 *F:	*	*F:	*
 *M2/1	*	*M2/1	*
 *met(C|)	*	*met(C|)	*
-2C	-i-	2G	-bu-
-4BB-	.	2A.	-i-
-4AA	.	.	.
-=17	=17	=17	=17
-1BB-	.	.	.
-.	.	8GL	.
-.	.	8FJ	.
-.	.	2G	.
-[1AA	-stis,	1A	-stis,
-=	=	=	=
+2A	pa-	2c	.
+2G	-ri-	2B-	-ri-
+=25	=25	=25	=25
+1A	-ter,	[1A	-ter,
 *-	*-	*-	*-
 !!!RDF**kern: l = terminal long
 !!!RDF**kern: i = editorial accidental
