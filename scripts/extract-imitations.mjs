@@ -37,6 +37,19 @@ function tokenIsDataRecord(token, includeNullToken = false) {
     return !token.startsWith('!') && !token.startsWith('*') && !token.startsWith('=') && !(!includeNullToken && token === '.');
 }
 
+function escapeShell(cmd) {
+    return '"' + cmd.replace(/(["$`\\])/g, '\\$1') + '"';
+}
+
+function getImitationInterval(firstVoiceStartToken, secondVoiceStartToken) {
+    const kern = `**kern
+${firstVoiceStartToken}
+${secondVoiceStartToken}
+*-`;
+    const result = execSync(`echo ${escapeShell(kern)} | mint`).toString().trim();;
+    return result.split('\n')[2];
+}
+
 execSync(`rm -rf ${imitationsKernPath}`);
 execSync(`mkdir -p ${imitationsKernPath}`);
 execSync(`rm -rf ${imitationsYamlPath}`);
@@ -93,6 +106,10 @@ getFiles(pathToKernScores).forEach(file => {
 
                 const imitationId = `${id}-${startBeat}`;
 
+                const upperVoiceIsFirst = upperStartBeat < lowerStartBeat;
+                const firstVoiceStartToken = lines[upperVoiceIsFirst ? upperStartLineIndex : lowerStartLineIndex].split('\t')[upperVoiceIsFirst ? 2 : 0]
+                const secondVoiceStartToken = lines[upperVoiceIsFirst ? lowerStartLineIndex : upperStartLineIndex].split('\t')[upperVoiceIsFirst ? 0: 2]
+
                 const config = {
                     id: imitationId,
                     biciniumId: id,
@@ -107,6 +124,7 @@ getFiles(pathToKernScores).forEach(file => {
                     lowerStartLineIndex,
                     lowerEndLineIndex,
                     filename: imitationFilename,
+                    interval: getImitationInterval(firstVoiceStartToken, secondVoiceStartToken),
                 };
 
                 const configFilename = `${imitationId}.yaml`;
