@@ -4,6 +4,7 @@
         <NuxtLink to="/about">Über das Projekt</NuxtLink>
         <NuxtLink to="/bicinium">Bicinien</NuxtLink>
         <NuxtLink to="/cadences">Kadenzen</NuxtLink>
+        <NuxtLink to="/imitations">Imitationen</NuxtLink>
     </div>
     <main>
         <slot></slot>
