@@ -107,8 +107,8 @@ getFiles(pathToKernScores).forEach(file => {
                 const imitationId = `${id}-${startBeat}`;
 
                 const upperVoiceIsFirst = upperStartBeat < lowerStartBeat;
-                const firstVoiceStartToken = lines[upperVoiceIsFirst ? upperStartLineIndex : lowerStartLineIndex].split('\t')[upperVoiceIsFirst ? 2 : 0]
-                const secondVoiceStartToken = lines[upperVoiceIsFirst ? lowerStartLineIndex : upperStartLineIndex].split('\t')[upperVoiceIsFirst ? 0: 2]
+                const firstVoiceStartToken = lines[upperVoiceIsFirst ? upperStartLineIndex : lowerStartLineIndex].split('\t')[upperVoiceIsFirst ? 2 : 0];
+                const secondVoiceStartToken = lines[upperVoiceIsFirst ? lowerStartLineIndex : upperStartLineIndex].split('\t')[upperVoiceIsFirst ? 0: 2];
 
                 const config = {
                     id: imitationId,
