@@ -19,7 +19,7 @@ onMounted(async () => {
 
 <template>
     <UCard :title="location">
-        <template v-slot:header v-if="!shortTitle">
+        <template v-slot:header>
             <div class="text-xl font-medium leading-5 text-gray-800">
                 <NuxtLink :to="{ name: 'bicinium-id', params: { id: bicinium.id } }">
                     {{ `${bicinium.nr}. ${bicinium.title}` }}
