@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxt/ui'
   ],
   vite: {
     optimizeDeps: {
