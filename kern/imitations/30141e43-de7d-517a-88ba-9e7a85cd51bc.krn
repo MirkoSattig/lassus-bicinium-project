@@ -1,0 +1,24 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[b-]	*	*k[b-]	*
+*a:phr	*	*a:phr	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+1F	.	2r	.
+.	.	2a	non
+=8	=8	=8	=8
+2r	.	1.f	am-
+2f	non	.	.
+1d.	am-	.	.
+.	.	2g	-bu-
+=9	=9	=9	=9
+.	.	1f	-lat,
+2c#X	-bu-	.	.
+[2d	-lat,	2r	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

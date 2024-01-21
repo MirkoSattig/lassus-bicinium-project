@@ -4,12 +4,12 @@ const { data: biciniumData } = await useAsyncData("bicinia", () => queryContent(
 </script>
 
 <template>
-    <Container>
+    <UContainer>
         <Heading>Bicinien</Heading>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div v-for="bicinium in biciniumData" :key="bicinium.id">
                 <BiciniumListItem :bicinium="bicinium" />
             </div>
         </div>
-    </Container>
+    </UContainer>
 </template>

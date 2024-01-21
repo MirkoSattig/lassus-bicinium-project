@@ -33,8 +33,21 @@ function getFiles(directory, fileList) {
     return fileList;
 }
 
-export function tokenIsDataRecord(token, includeNullToken = false) {
+function tokenIsDataRecord(token, includeNullToken = false) {
     return !token.startsWith('!') && !token.startsWith('*') && !token.startsWith('=') && !(!includeNullToken && token === '.');
+}
+
+function escapeShell(cmd) {
+    return '"' + cmd.replace(/(["$`\\])/g, '\\$1') + '"';
+}
+
+function getImitationInterval(firstVoiceStartToken, secondVoiceStartToken) {
+    const kern = `**kern
+${firstVoiceStartToken}
+${secondVoiceStartToken}
+*-`;
+    const result = execSync(`echo ${escapeShell(kern)} | mint`).toString().trim();;
+    return result.split('\n')[2];
 }
 
 execSync(`rm -rf ${imitationsKernPath}`);
@@ -80,34 +93,49 @@ getFiles(pathToKernScores).forEach(file => {
                     }                    
                 }
             }
-            console.log({upperStartBeat, upperEndBeat, lowerStartBeat, lowerEndBeat})
-            // if (startLineIndex && endLineIndex) {
-            //     const startLine = startLineIndex + 1;
-            //     const endLine = endLineIndex + 1;
+            if (upperStartLineIndex && upperEndLineIndex && lowerStartLineIndex && lowerEndLineIndex) {
+                const startLine = Math.min(upperStartLineIndex, lowerStartLineIndex) + 1;
+                const endLine = Math.max(upperEndLineIndex, lowerEndLineIndex) + 1;
 
-            //     const imitationKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
-            //     const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
-            //     fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
+                const startBeat = Math.min(upperStartBeat, lowerStartBeat);
+                const endBeat = Math.max(upperEndBeat, lowerEndBeat);
 
-            //     const config = {
-            //         biciniumId: id,
-            //         startBeat,
-            //         endBeat,
-            //         startLine,
-            //         endLine,
-            //         ultima,
-            //         filename: imitationFilename,
-            //     };
+                const imitationKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
+                const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
+                fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
 
-            //     const configFilename = `${id}-${endBeat}.yaml`;
-            //     fs.writeFileSync(`${imitationsYamlPath}${configFilename}`, yaml.dump(config, {
-            //         indent: 4,
-            //         lineWidth: -1,
-            //         sortKeys: true,
-            //     }));
+                const imitationId = `${id}-${startBeat}`;
 
-            //     console.log(config);
-            // }
+                const upperVoiceIsFirst = upperStartBeat < lowerStartBeat;
+                const firstVoiceStartToken = lines[upperVoiceIsFirst ? upperStartLineIndex : lowerStartLineIndex].split('\t')[upperVoiceIsFirst ? 2 : 0];
+                const secondVoiceStartToken = lines[upperVoiceIsFirst ? lowerStartLineIndex : upperStartLineIndex].split('\t')[upperVoiceIsFirst ? 0: 2];
+
+                const config = {
+                    id: imitationId,
+                    biciniumId: id,
+                    startBeat,
+                    endBeat,
+                    upperStartBeat,
+                    upperEndBeat,
+                    lowerStartBeat,
+                    lowerEndBeat,
+                    upperStartLineIndex,
+                    upperEndLineIndex,
+                    lowerStartLineIndex,
+                    lowerEndLineIndex,
+                    filename: imitationFilename,
+                    interval: getImitationInterval(firstVoiceStartToken, secondVoiceStartToken),
+                };
+
+                const configFilename = `${imitationId}.yaml`;
+                fs.writeFileSync(`${imitationsYamlPath}${configFilename}`, yaml.dump(config, {
+                    indent: 4,
+                    lineWidth: -1,
+                    sortKeys: true,
+                }));
+
+                console.log(config);
+            }
         });
     }
 });

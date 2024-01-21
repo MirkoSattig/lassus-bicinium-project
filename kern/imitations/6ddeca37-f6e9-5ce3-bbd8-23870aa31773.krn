@@ -1,0 +1,23 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefGv2	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2F]	.	1F	di-
+=35	=35	=35	=35
+1BB-	di-	.	.
+.	.	2D	-cit
+2GG	-cit	2.B-	Do-
+2BB-.	Do-	.	.
+.	.	4A	.
+=36	=36	=36	=36
+.	.	4G	.
+4AA	.	4F	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

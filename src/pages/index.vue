@@ -1,5 +1,5 @@
 <template>
-    <Container>
+    <UContainer>
         <Heading>Startseite</Heading>
         <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
@@ -12,5 +12,5 @@
             rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
             ipsum dolor sit amet.
         </p>
-    </Container>
+    </UContainer>
 </template>

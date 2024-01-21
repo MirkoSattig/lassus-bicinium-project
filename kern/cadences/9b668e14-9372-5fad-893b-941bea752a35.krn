@@ -1,0 +1,18 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefGv2	*
+*k[]	*	*k[]	*
+*G:mix	*	*G:mix	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=26	=26	=26	=26
+2G	.	2.d	Do-
+2F#X	-mi-	.	.
+.	.	4d	-mi-
+2G	-ni,	[2d	-ni,
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

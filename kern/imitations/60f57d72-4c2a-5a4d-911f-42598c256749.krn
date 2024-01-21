@@ -1,0 +1,30 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefGv2	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+1.A]	.	2f	lau-
+=22	=22	=22	=22
+.	.	2e	-da-
+.	.	1c	-ve-
+1F	lau-	.	.
+.	.	4B-	.
+.	.	4A	.
+=23	=23	=23	=23
+2E	-da-	2c	.
+1G	-ve-	2B-	-runt
+.	.	2.d	pa-
+4F	.	.	.
+4E	.	4c	.
+=24	=24	=24	=24
+2G	.	4B-	.
+.	.	4G	.
+[4F	-runt	4A	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

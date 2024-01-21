@@ -1,0 +1,36 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2f]	.	2a	ne-
+2r	.	2.f	-go-
+2d	ne-	.	.
+.	.	4f	-ti-
+=25	=25	=25	=25
+2.c	-go-	2g	-a-
+.	.	2a	-ti-
+4c	-ti-	.	.
+2d	-a-	1b-X	-o-
+2e	-ti-	.	.
+=26	=26	=26	=26
+1f	-o-	2a	-ne
+.	.	2d	ar-
+2e	-ne	2g	-gen-
+2A	ar-	4f	.
+.	.	4e	.
+=27	=27	=27	=27
+2d	-gen-	2f	.
+4c	.	2g	-ti,
+4B	.	.	.
+2c	.	2r	.
+2d	-ti,	2f	et
+=	=	=	=
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

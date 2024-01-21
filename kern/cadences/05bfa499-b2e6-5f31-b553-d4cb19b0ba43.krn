@@ -1,0 +1,23 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=34	=34	=34	=34
+2f]	.	4cc	.
+.	.	4b	.
+4e	.	1dd	.
+4d	.	.	.
+2e	.	.	.
+2e	-si-	2cc#X	-si-
+=35	=35	=35	=35
+0d	-mi.	0dd	-mi.
+==	==	==	==
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
