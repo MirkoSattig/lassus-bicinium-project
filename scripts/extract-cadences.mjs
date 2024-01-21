@@ -77,7 +77,9 @@ getFiles(pathToKernScores).forEach(file => {
                 const cadenceFilename = `${uuidv5(cadenceKern, UUID_NAMESPACE)}.krn`;
                 fs.writeFileSync(`${cadencesKernPath}${cadenceFilename}`, cadenceKern);
 
+                const cadenceId = `${id}-${endBeat}`;
                 const config = {
+                    id: cadenceId,
                     biciniumId: id,
                     startBeat,
                     endBeat,
@@ -87,7 +89,7 @@ getFiles(pathToKernScores).forEach(file => {
                     filename: cadenceFilename,
                 };
 
-                const configFilename = `${id}-${endBeat}.yaml`;
+                const configFilename = `${cadenceId}.yaml`;
                 fs.writeFileSync(`${cadencesYamlPath}${configFilename}`, yaml.dump(config, {
                     indent: 4,
                     lineWidth: -1,
