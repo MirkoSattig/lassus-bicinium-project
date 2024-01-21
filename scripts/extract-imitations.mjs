@@ -80,34 +80,44 @@ getFiles(pathToKernScores).forEach(file => {
                     }                    
                 }
             }
-            console.log({upperStartBeat, upperEndBeat, lowerStartBeat, lowerEndBeat})
-            // if (startLineIndex && endLineIndex) {
-            //     const startLine = startLineIndex + 1;
-            //     const endLine = endLineIndex + 1;
+            if (upperStartLineIndex && upperEndLineIndex && lowerStartLineIndex && lowerEndLineIndex) {
+                const startLine = Math.min(upperStartLineIndex, lowerStartLineIndex) + 1;
+                const endLine = Math.max(upperEndLineIndex, lowerEndLineIndex) + 1;
 
-            //     const imitationKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
-            //     const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
-            //     fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
+                const startBeat = Math.min(upperStartBeat, lowerStartBeat);
+                const endBeat = Math.max(upperEndBeat, lowerEndBeat);
 
-            //     const config = {
-            //         biciniumId: id,
-            //         startBeat,
-            //         endBeat,
-            //         startLine,
-            //         endLine,
-            //         ultima,
-            //         filename: imitationFilename,
-            //     };
+                const imitationKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
+                const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
+                fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
 
-            //     const configFilename = `${id}-${endBeat}.yaml`;
-            //     fs.writeFileSync(`${imitationsYamlPath}${configFilename}`, yaml.dump(config, {
-            //         indent: 4,
-            //         lineWidth: -1,
-            //         sortKeys: true,
-            //     }));
+                const imitationId = `${id}-${startBeat}`;
 
-            //     console.log(config);
-            // }
+                const config = {
+                    id: imitationId,
+                    biciniumId: id,
+                    startBeat,
+                    endBeat,
+                    upperStartBeat,
+                    upperEndBeat,
+                    lowerStartBeat,
+                    lowerEndBeat,
+                    upperStartLineIndex,
+                    upperEndLineIndex,
+                    lowerStartLineIndex,
+                    lowerEndLineIndex,
+                    filename: imitationFilename,
+                };
+
+                const configFilename = `${imitationId}.yaml`;
+                fs.writeFileSync(`${imitationsYamlPath}${configFilename}`, yaml.dump(config, {
+                    indent: 4,
+                    lineWidth: -1,
+                    sortKeys: true,
+                }));
+
+                console.log(config);
+            }
         });
     }
 });
