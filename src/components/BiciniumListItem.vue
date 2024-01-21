@@ -18,8 +18,8 @@ onMounted(async () => {
 </script>
 
 <template>
-    <Card :title="location">
-        <template v-slot:title v-if="!shortTitle">
+    <UCard :title="location">
+        <template v-slot:header v-if="!shortTitle">
             <div class="text-xl font-medium leading-5 text-gray-800">
                 <NuxtLink :to="{ name: 'bicinium-id', params: { id: bicinium.id } }">
                     {{ `${bicinium.nr}. ${bicinium.title}` }}
@@ -38,5 +38,5 @@ onMounted(async () => {
                 :options="{mnumInterval: 1}"
             />
         </div>
-    </Card>
+    </UCard>
 </template>
