@@ -33,7 +33,7 @@ function getFiles(directory, fileList) {
     return fileList;
 }
 
-export function tokenIsDataRecord(token, includeNullToken = false) {
+function tokenIsDataRecord(token, includeNullToken = false) {
     return !token.startsWith('!') && !token.startsWith('*') && !token.startsWith('=') && !(!includeNullToken && token === '.');
 }
 
