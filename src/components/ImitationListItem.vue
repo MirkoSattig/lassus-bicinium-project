@@ -43,6 +43,7 @@ const location = `♩ ${props.imitation.startBeat}`;
                 :lazy-delay="100"
                 :options="{mnumInterval: 1}"
             />
+            Intervall: {{ imitation.interval }}
         </div>
     </UCard>
 </template>
