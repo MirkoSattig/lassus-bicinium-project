@@ -4,7 +4,7 @@ const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryConten
 </script>
 
 <template>
-    <Container>
+    <UContainer>
         <Heading>Bicinien</Heading>
         <VerovioCanvas
             :url="bicinium.localRawFile"
@@ -13,5 +13,5 @@ const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryConten
                 spacingSystem: 15,
             }"
         />
-    </Container>
+    </UContainer>
 </template>

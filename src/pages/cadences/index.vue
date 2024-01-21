@@ -8,12 +8,12 @@ function getBicinium(id) {
 </script>
 
 <template>
-    <Container>
+    <UContainer>
         <Heading>Kadenzen</Heading>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div v-for="cadence in cadenceData" :key="cadence.id">
                 <CadenceListItem :cadence="cadence" :bicinium="getBicinium(cadence.biciniumId)"/>
             </div>
         </div>
-    </Container>
+    </UContainer>
 </template>
