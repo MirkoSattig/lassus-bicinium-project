@@ -1,0 +1,21 @@
+**kern	**text	**kern	**text
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefGv2	*
+*k[]	*	*k[]	*
+*G:mix	*	*G:mix	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2D	con-	1.d]	.
+=20	=20	=20	=20
+2G	-sti-	.	.
+2F	-tu-	.	.
+0E	-am:	2r	.
+.	.	2G	con-
+=21	=21	=21	=21
+.	.	2c	-sti-
+.	.	2B	-tu-
+2r	.	[2A	-am:
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental

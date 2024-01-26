@@ -1,0 +1,24 @@
+**kern	**text	**kern	**text
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefGv2	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2D]	.	2F	et
+2r	.	2G	tol-
+2C	et	2A	-lat
+=20	=20	=20	=20
+2D	tol-	4B-	cru-
+.	.	8AL	.
+.	.	8B-J	.
+2E	-lat	1c	.
+4F	cru-	.	.
+8EL	.	.	.
+8FJ	.	.	.
+2G	.	2B-	-cem
+=	=	=	=
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
