@@ -6,7 +6,7 @@
         <NuxtLink to="/cadences">Kadenzen</NuxtLink>
         <NuxtLink to="/imitations">Imitationen</NuxtLink>
     </div>
-    <main>
+    <main class="my-8">
         <slot></slot>
     </main>
     <TheFooter />
