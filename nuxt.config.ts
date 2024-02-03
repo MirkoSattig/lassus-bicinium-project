@@ -1,9 +1,9 @@
-import { fileURLToPath } from "node:url";
+import { fileURLToPath } from 'node:url';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  srcDir:"src/",
+  srcDir:'src/',
   modules: [
     '@nuxt/content',
     '@pinia/nuxt',
@@ -31,9 +31,9 @@ export default defineNuxtConfig({
     // ... options
     sources: {
       root: {
-        driver: "fs",
+        driver: 'fs',
         //prefix: ’/root’,
-        base: fileURLToPath(new URL ("./content", import.meta.url)),
+        base: fileURLToPath(new URL ('./content', import.meta.url)),
       }
     }
   }
