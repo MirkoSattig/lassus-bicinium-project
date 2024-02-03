@@ -13,6 +13,13 @@ const location = `T. ${Math.ceil(cadence.value.endBeat / 8)} ♩ ${(cadence.valu
                 {{ `${bicinium.nr}. ${bicinium.title}, ${location}` }}
             </NuxtLink>
         </Heading>
-        <VerovioCanvas :url="`/kern/cadences/${cadence.filename}`" :scale="35" />
+        <div class="flex flex-col gap-4">
+            <div class="flex gap-2">
+                <UButton :to="`/bicinium/${bicinium.id}`">
+                    Bicinium ansehen
+                </UButton>
+            </div>
+            <VerovioCanvas :url="`/kern/cadences/${cadence.filename}`" :scale="35" />
+        </div>
     </UContainer>
 </template>
