@@ -1,0 +1,20 @@
+**kern	**text	**kern	**text
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[b-]	*	*k[b-]	*
+*a:phr	*	*a:phr	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=13	=13	=13	=13
+1d	.	4d	.
+.	.	4e	.
+.	.	1f	.
+2.B-	te-	.	.
+.	.	2e	-ne-
+4B-	-ne-	.	.
+=14	=14	=14	=14
+1A	-bris	[1f	-bris,
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
