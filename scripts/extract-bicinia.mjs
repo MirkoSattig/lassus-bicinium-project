@@ -13,6 +13,39 @@ const metadata = {
     "01-beatus-vir": {
         youtubeId: "yn9Mjzy4LYg",
     },
+    "02-beatus-homo": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "01-oculus-non-vidit": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "04-justus-cor-suum-tradet": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "05-exspectatio-justorum": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "06-qui-sequitur-me": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "07-justi-tulerunt-spolia": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "08-sancti-mei": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "09-qui-vult-venire-post-me": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "10-serve-bone": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "11-fulgebunt-justi": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+    "12-sicut-rosa": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
 };
 
 function getIdFromFilename(path) {
