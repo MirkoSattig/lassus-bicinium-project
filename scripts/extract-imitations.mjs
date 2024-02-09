@@ -50,6 +50,29 @@ ${secondVoiceStartToken}
     return result.split('\n')[2];
 }
 
+function formatImitationKern(kern, upperStartBeat, upperEndBeat, lowerStartBeat, lowerEndBeat) {
+    const lines = kern.split('\n');
+    let formattedLines = lines.map((line) => {
+        const tokens = line.split('\t');
+        const beat = parseFloat(tokens[4]);
+        return tokens.map((token, tokenIndex) => {
+            if (tokenIsDataRecord(token)) {
+                if (
+                    (beat < lowerStartBeat && tokenIndex === 0) ||
+                    (beat > lowerEndBeat && tokenIndex === 0) ||
+                    (beat < upperStartBeat && tokenIndex === 2) ||
+                    (beat > upperEndBeat && tokenIndex === 2)
+                ) {
+                    return `${token}@`;
+                }
+            }
+            return token;
+        }).join('\t');
+    });
+
+    return formattedLines.join('\n');
+}
+
 execSync(`rm -rf ${imitationsKernPath}`);
 execSync(`mkdir -p ${imitationsKernPath}`);
 execSync(`rm -rf ${imitationsYamlPath}`);
@@ -99,8 +122,9 @@ getFiles(pathToKernScores).forEach(file => {
 
                 const startBeat = Math.min(upperStartBeat, lowerStartBeat);
                 const endBeat = Math.max(upperEndBeat, lowerEndBeat);
-
-                const imitationKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
+                
+                const formattedKern = formatImitationKern(kern, upperStartBeat, upperEndBeat, lowerStartBeat, lowerEndBeat);
+                const imitationKern = execSync(`echo ${escapeShell(formattedKern)} | extractxx -f 1-4 | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending | echo -ne "$(cat)" | cat - <(echo -e -n "\n!!!RDF**kern: @ = marked note, color=#ccc")`, { shell: '/bin/bash' }).toString().trim();
                 const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
                 fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
 
