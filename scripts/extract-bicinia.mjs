@@ -9,6 +9,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const pathToKernScores = `${__dirname}/../lassus-bicinia/kern/`;
 const biciniumYamlPath = `${__dirname}/../content/bicinia/`;
 
+const metadata = {
+    "01-beatus-vir": {
+        youtubeId: "yn9Mjzy4LYg",
+    },
+};
+
 function getIdFromFilename(path) {
     return path.split(/[\\\/]/).pop().replace(/\..+$/, '');
 }
@@ -61,6 +67,7 @@ getFiles(pathToKernScores).forEach(file => {
         nr: parseInt(referenceRecords.ONM, 10),
         title: referenceRecords['OTL@@LA'],
         localRawFile: `/kern/lassus-bicinia/${id}.krn`,
+        youtubeId: metadata[id]?.youtubeId ?? null,
     };
 
     const configFilename = `${id}.yaml`;

@@ -2,7 +2,7 @@
     <UContainer>
         <Heading>Über das Projekt</Heading>
         <Subheading>Features</Subheading>
-        <ul>
+        <ul class="list-disc pl-12">
             <li>alle 12 Bicinien können einzeln aufgerufen werden</li>
             <li>unter “Kadenzen” sind sämtliche Kadenzen aus den Bicinien gefiltert und einzeln einsehbar</li>
             <li>unter “Imitationen” lassen sich die einzelnen Soggetti, sowie deren Imitationsintervall herausfiltern und innerhalb der Partitur wiederfinden</li>
