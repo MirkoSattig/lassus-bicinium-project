@@ -14,37 +14,37 @@ const metadata = {
         youtubeId: "yn9Mjzy4LYg",
     },
     "02-beatus-homo": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "wj_amDCDJZA",
     },
-    "01-oculus-non-vidit": {
-        youtubeId: "yn9Mjzy4LYg",
+    "03-oculus-non-vidit": {
+        youtubeId: "WKGZrdvp_CM",
     },
     "04-justus-cor-suum-tradet": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "wkJxdxX9rUc",
     },
     "05-exspectatio-justorum": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "Kn5_VzzVJ_c",
     },
     "06-qui-sequitur-me": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "MQ7Qx5kbH_E",
     },
     "07-justi-tulerunt-spolia": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "JNxP7XS98x0",
     },
     "08-sancti-mei": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "9zMsQANKhcw",
     },
     "09-qui-vult-venire-post-me": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "QK5at2mV5rI",
     },
     "10-serve-bone": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "5Cb3d69pbuM",
     },
     "11-fulgebunt-justi": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "rB_Hbrb7wO4",
     },
     "12-sicut-rosa": {
-        youtubeId: "yn9Mjzy4LYg",
+        youtubeId: "ADsX997bsLg",
     },
 };
 
