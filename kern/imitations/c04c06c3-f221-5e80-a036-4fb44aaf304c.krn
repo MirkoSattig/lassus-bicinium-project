@@ -1,0 +1,22 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefC4	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+1D@	-get	{2B-	se-
+.	.	1A	-met-
+{2F	se-	.	.
+=13	=13	=13	=13
+2E	-met-	2G	-ip-
+2D	-ip-	2F}	-sum,
+[2C}	-sim,	2r@	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

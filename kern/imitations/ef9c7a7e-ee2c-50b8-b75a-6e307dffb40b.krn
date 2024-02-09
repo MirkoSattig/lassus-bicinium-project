@@ -1,0 +1,25 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[b-]	*	*k[b-]	*
+*a:phr	*	*a:phr	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2d@]	.	{2f	non
+=10	=10	=10	=10
+2r@	.	1.d	am-
+{2d	non	.	.
+1A.	am-	.	.
+.	.	2c	-bu-
+=11	=11	=11	=11
+.	.	1d}	-lat
+2B-	-bu-	.	.
+2A}	-lat	[2a@	in
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

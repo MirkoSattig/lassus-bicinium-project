@@ -1,0 +1,55 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefC4	*
+*k[]	*	*k[]	*
+*G:mix	*	*G:mix	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+1G@	Sic-	4G@]	.
+.	.	4A	.
+.	.	4B	.
+.	.	4c	.
+2G@	-ut	4d	.
+.	.	4B	.
+=2	=2	=2	=2
+4C@	ro-	1e	.
+4D@	.	.	.
+4E@	.	.	.
+4F@	.	.	.
+2.G@	.	2d	-ut
+.	.	1B	ro-
+4F@	.	.	.
+=3	=3	=3	=3
+1E@	.	.	.
+.	.	2e.	.
+1C@	-sa,	.	.
+.	.	4d@	.
+.	.	2c@	.
+=4	=4	=4	=4
+2.GG@	sic-	2B@	-sa,
+.	.	1d@	sic-
+4AA	.	.	.
+4BB	.	.	.
+4C	.	.	.
+4D	.	2d@	-ut
+4BB	.	.	.
+=5	=5	=5	=5
+1E	.	4G@	ro-
+.	.	4A@	.
+.	.	4B@	.
+.	.	4c@	.
+2D	-ut	2.d@	.
+1BB	ro-	.	.
+.	.	4c@	.
+=6	=6	=6	=6
+.	.	1B@	.
+2.E	.	.	.
+.	.	[4G@	-sa
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

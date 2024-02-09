@@ -1,0 +1,32 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC2	*	*clefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=12	=12	=12	=12
+2f@	-nis	{1a	a-
+{1d	a-	.	.
+.	.	1b	.
+1e	.	.	.
+=13	=13	=13	=13
+.	.	2.cc	-scen-
+2f.	-scen-	.	.
+.	.	4a	.
+.	.	2.dd	.
+4d	.	.	.
+2g.	.	.	.
+.	.	4b	.
+=14	=14	=14	=14
+.	.	2.ee}	.
+4e	.	.	.
+[4a}	.	.	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

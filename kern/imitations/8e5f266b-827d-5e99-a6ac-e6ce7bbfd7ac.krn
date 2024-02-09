@@ -1,0 +1,26 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2d@]	.	{2f#X	cir-
+2r@	.	2g	-cum-
+{2c#X	cir-	1a	-spe-
+=28	=28	=28	=28
+2d	-cum-	.	.
+1e	-spe-	2g	-cti-
+.	.	1f}	-o-
+2d	-cti-	.	.
+=29	=29	=29	=29
+*xywh-#44:239,1565,2351,382	*	*	*
+2c}	-o-	2e@	-nem
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack
