@@ -1,0 +1,24 @@
+**kern	**text	**kern	**text
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC2	*	*clefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2a]	.	2cc	nec
+=10	=10	=10	=10
+2r	.	1ff	in
+2d	nec	.	.
+1g	in	2dd	cor
+.	.	1gg	ho-
+=11	=11	=11	=11
+2e	cor	.	.
+1a	ho-	2ff	-mi-
+.	.	1ee	-nis
+2g	-mi-	.	.
+=12	=12	=12	=12
+2f	-nis	[2a	a-
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental

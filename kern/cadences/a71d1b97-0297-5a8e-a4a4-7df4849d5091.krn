@@ -1,0 +1,19 @@
+**kern	**text	**kern	**text
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefC4	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2FF	.	1A	-cti
+2F.	-cti	.	.
+=3	=3	=3	=3
+.	.	1G	me-
+8EL	.	.	.
+8DJ	.	.	.
+2E	.	.	.
+4F	me-	[4F	-i,
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental

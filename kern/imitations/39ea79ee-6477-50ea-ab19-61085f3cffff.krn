@@ -1,0 +1,27 @@
+**kern	**text	**kern	**text
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC2	*	*clefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=21	=21	=21	=21
+1r	.	1ee	his,
+1e	his,	2r	.
+.	.	2gg	qui
+=22	=22	=22	=22
+2r	.	2.dd	di-
+2g	qui	.	.
+.	.	4ee	.
+2.d	di-	2ff	.
+.	.	2dd	-li-
+4e	.	.	.
+=23	=23	=23	=23
+2f	.	2.a	-gunt
+2d	-li-	.	.
+.	.	4b	.
+4A	-gunt	4cc	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
