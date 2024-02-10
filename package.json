@@ -25,7 +25,9 @@
     "@nuxt/content": "^2.9.0",
     "@nuxt/ui": "^2.12.3",
     "@pinia/nuxt": "^0.5.1",
+    "pdfkit": "^0.14.0",
     "pinia": "^2.1.7",
+    "svg-to-pdfkit": "^0.1.8",
     "verovio": "^4.1.0",
     "vue-verovio-canvas": "^1.4.0"
   }

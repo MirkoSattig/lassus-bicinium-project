@@ -41,6 +41,7 @@ const { formattedScore } = useScoreFormatter(score);
             <div class="flex items-center gap-4">
                 <ScoreOptions />
                 <div class="flex gap-2 ml-auto">
+                    <UButton :to="`/api/bicinium/${bicinium.id}/pdf`">Download PDF</UButton>
                     <UButton :to="`https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`" target="_blank">
                         Auf GitHub öffnen
                     </UButton>
