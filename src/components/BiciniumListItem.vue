@@ -22,7 +22,7 @@ const { formattedScore } = useScoreFormatter(data);
 <template>
     <UCard>
         <template v-slot:header>
-            <div class="text-xl font-medium leading-5 text-gray-800">
+            <div class="text-xl font-medium leading-5">
                 <NuxtLink :to="{ name: 'bicinium-id', params: { id: bicinium.id } }">
                     {{ `${bicinium.nr}. ${bicinium.title}` }}
                 </NuxtLink>

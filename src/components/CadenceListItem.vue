@@ -28,7 +28,7 @@ const location = `T. ${Math.ceil(props.cadence.endBeat / 8)} ♩ ${(props.cadenc
 <template>
     <UCard :title="location">
         <template v-slot:header>
-            <div class="text-xl font-medium leading-5 text-gray-800">
+            <div class="text-xl font-medium leading-5">
                 <NuxtLink :href="`/cadences/${cadence.id}`">
                     {{ `${bicinium.nr}. ${bicinium.title}, ${location}` }}
                 </NuxtLink>
