@@ -14,7 +14,6 @@
   "author": "Mirko Sattig",
   "license": "ISC",
   "devDependencies": {
-    "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.4",
     "js-yaml": "^4.1.0",
     "nuxt": "^3.8.2",
