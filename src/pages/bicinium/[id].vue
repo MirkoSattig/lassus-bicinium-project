@@ -22,7 +22,7 @@ const { formattedScore } = useScoreFormatter(score);
 
             <div>
                 <Heading>{{ `${bicinium.nr}. ${bicinium.title}` }}</Heading>
-                <div class="flex gap-2">
+                <div class="flex gap-2 items-center">
                     <div v-if="prevBicinium">
                         <UButton :to="{ name: 'bicinium-id', params: { id: prevBicinium.id }, hash: $route.hash }">
                             <Icon name="heroicons:arrow-left-circle" class="text-xl" />
