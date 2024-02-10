@@ -86,6 +86,34 @@ function getFiles(directory, fileList) {
     return fileList;
 }
 
+function getFinalis(file) {
+    const stdout = execSync(`extract -f 1 ${file} | grep '^\\*[A-Ha-h]:'`);
+    const regex = new RegExp(/^\*([a-hA-H]):(\w{3})$/);
+    const matches = regex.exec(stdout.toString().trim());
+    return matches?.[1].toLowerCase() ?? null;
+}
+
+function getMode(file) {
+    const modeMapping = {
+        dor: 'dorian',
+        phr: 'phrygian',
+        lyd: 'lydian',
+        mix: 'mixolydian',
+        aeo: 'aeolian',
+        ion: 'ionian',
+        loc: 'locrian',
+    };
+    const stdout = execSync(`extract -f 1 ${file} | grep '^\\*[A-Ha-h]:'`);
+    const regex = new RegExp(/^\*([a-hA-H]):(\w{3})$/);
+    const matches = regex.exec(stdout.toString().trim());
+    return modeMapping[matches?.[2]] ?? null;
+}
+
+function getTransposition(file) {
+    const stdout = execSync(`extract -f 1 ${file} | grep '*k\\['`);
+    return stdout.toString().trim().split('\n')[0].replace('*clef', '') === '*k[b-]' ? 'cantus_mollis' : 'cantus_durus';
+}
+
 execSync(`mkdir -p ${biciniumYamlPath}`);
 
 getFiles(pathToKernScores).forEach(file => {
@@ -100,6 +128,9 @@ getFiles(pathToKernScores).forEach(file => {
         nr: parseInt(referenceRecords.ONM, 10),
         title: referenceRecords['OTL@@LA'],
         localRawFile: `/kern/lassus-bicinia/${id}.krn`,
+        finalis: getFinalis(file),
+        mode: getMode(file),
+        transposition: getTransposition(file),
     }, metadata[id] ?? {});
 
     const configFilename = `${id}.yaml`;
