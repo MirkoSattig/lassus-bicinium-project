@@ -20,6 +20,8 @@ onMounted(async () => {
     data.value = await response.text();
 });
 
+const { formattedScore } = useScoreFormatter(data);
+
 const location = `T. ${Math.ceil(props.cadence.endBeat / 8)} ♩ ${(props.cadence.endBeat % 8) + 1}`;
 </script>
 
@@ -34,10 +36,9 @@ const location = `T. ${Math.ceil(props.cadence.endBeat / 8)} ♩ ${(props.cadenc
         </template>
         <div class="flex flex-col gap-4 mt-4">
             <VerovioCanvas
-                v-if="data"
-                :data="data"
+                v-if="formattedScore"
+                :data="formattedScore"
                 view-mode="horizontal"
-                :scale="35"
                 lazy
                 unload
                 :lazy-delay="100"
