@@ -1,0 +1,21 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*mclefGv2	*	*mclefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+4f]	.	2d	-en-
+4e	.	.	.
+1d	.	2f	-ti-
+=12	=12	=12	=12
+.	.	1e	-am,
+2c#X	-ti-	.	.
+[2d	-am,	2r	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

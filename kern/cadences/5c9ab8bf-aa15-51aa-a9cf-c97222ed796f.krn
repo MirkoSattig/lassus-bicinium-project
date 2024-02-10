@@ -1,0 +1,24 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*mclefGv2	*	*mclefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=23	=23	=23	=23
+4g]	.	1a	.
+4f	.	.	.
+2f.	.	.	.
+.	.	1g	-jus
+8eL	.	.	.
+8dJ	.	.	.
+2e	.	.	.
+=24	=24	=24	=24
+[2f	-jus	2r	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

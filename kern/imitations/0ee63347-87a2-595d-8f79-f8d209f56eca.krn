@@ -1,0 +1,35 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefC4	*
+*mclefF4	*	*mclefGv2	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2AA@]	.	{2c	mer-
+2r@	.	1c	-ce-
+{2F	mer-	.	.
+=19	=19	=19	=19
+1F	-ce-	2A	-dem
+.	.	2D	la-
+2D	-dem	4B-	-bo-
+.	.	4A	.
+2GG	la-	1B-	.
+=20	=20	=20	=20
+4E-X	-bo-	.	.
+4D	.	.	.
+2E-	.	1G	-rum
+1C	-rum	.	.
+.	.	1e	ve-
+=21	=21	=21	=21
+1G	ve-	.	.
+.	.	2.d}	-stro-
+[4F}	-stro-	.	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

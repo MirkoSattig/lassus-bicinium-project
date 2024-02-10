@@ -1,0 +1,25 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*mclefGv2	*	*mclefG2	*
+*k[b-]	*	*k[b-]	*
+*a:phr	*	*a:phr	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=31	=31	=31	=31
+4d	.	4g	.
+4c	.	4f	.
+4c	.	1f	.
+8B-L	.	.	.
+8AJ	.	.	.
+2B-	.	.	.
+2B-	-mi-	2e	-mi-
+=32	=32	=32	=32
+0A	-nus.	0f	-nus.
+==	==	==	==
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
