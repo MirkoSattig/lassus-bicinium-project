@@ -9,13 +9,15 @@ function getBicinium(id) {
 
 <template>
     <UContainer>
-        <Heading>Imitationen</Heading>
+        <div class="flex flex-col gap-8">
+            <Heading>Imitationen</Heading>
         
-        <ScoreOptions />
+            <ScoreOptions />
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div v-for="imitation in imitationData" :key="imitation.id">
-                <ImitationListItem :imitation="imitation" :bicinium="getBicinium(imitation.biciniumId)"/>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div v-for="imitation in imitationData" :key="imitation.id">
+                    <ImitationListItem :imitation="imitation" :bicinium="getBicinium(imitation.biciniumId)"/>
+                </div>
             </div>
         </div>
     </UContainer>
