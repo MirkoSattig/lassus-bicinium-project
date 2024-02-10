@@ -1,0 +1,23 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC3	*	*clefC1	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+{1d	me-	2f@]	.
+=19	=19	=19	=19
+.	.	2r@	.
+2B-X	-li-	{1f	me-
+1B-}	-or	.	.
+.	.	2d	-li-
+=20	=20	=20	=20
+[2f@	est	2d}	-or
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

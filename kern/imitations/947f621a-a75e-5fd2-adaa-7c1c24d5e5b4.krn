@@ -1,0 +1,30 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF3	*	*clefC3	*
+*k[]	*	*k[]	*
+*G:mix	*	*G:mix	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+{2c	in	2e@]	.
+2B	gau-	2r@	.
+2A	-di-	{2f	in
+=29	=29	=29	=29
+2.G	-um	2e	gau-
+.	.	2d	-di-
+4F	.	.	.
+4E	.	2.g	-um
+4D	.	.	.
+2C.}	.	.	.
+.	.	4f	.
+=30	=30	=30	=30
+.	.	4e	.
+4D@	.	4d	.
+4E@	.	[4c}	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack
