@@ -4,7 +4,7 @@ export function useScoreFormatter(kern) {
 
     const formattedScore = computed(() => {
         let str = score.value?.trim();
-        if (options.value.modernClefs) {
+        if (options.modernClefs) {
             str += `\n!!!filter: modori -m`;
         }
         return str ?? null;

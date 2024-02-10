@@ -1,9 +1,9 @@
 <script setup>
-const options = useScoreOptions();
+const { modernClefs } = storeToRefs(useScoreOptions());
 </script>
 
 <template>
     <div>
-        <UCheckbox v-model="options.modernClefs" label="Moderne Schlüssel" /> 
+        <UCheckbox v-model="modernClefs" label="Moderne Schlüssel" /> 
     </div>
 </template>

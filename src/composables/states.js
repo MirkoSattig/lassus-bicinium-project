@@ -1,5 +1,8 @@
-export function useScoreOptions() {
-    return useState('scoreOptions', () => ({
+import { defineStore } from 'pinia';
+
+export const useScoreOptions = defineStore('scoreOptions', {
+    state: () => ({
         modernClefs: false,
-    }));
+    }),
+});
 };
