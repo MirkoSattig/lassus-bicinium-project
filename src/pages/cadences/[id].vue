@@ -19,7 +19,7 @@ const location = `T. ${Math.ceil(cadence.value.endBeat / 8)} ♩ ${(cadence.valu
                     Bicinium ansehen
                 </UButton>
             </div>
-            <VerovioCanvas :url="`/kern/cadences/${cadence.filename}`" :scale="35" />
+            <VerovioCanvas :url="`/kern/cadences/${cadence.filename}`" />
         </div>
     </UContainer>
 </template>

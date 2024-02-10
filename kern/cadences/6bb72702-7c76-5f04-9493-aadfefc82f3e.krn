@@ -1,0 +1,24 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF4	*	*clefC4	*
+*mclefF4	*	*mclefGv2	*
+*k[b-]	*	*k[b-]	*
+*F:	*	*F:	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+=26	=26	=26	=26
+4D	.	4Bn	.
+4E	.	4c	.
+2F.	.	2A	.
+.	.	1G	-bis,
+8EL	.	.	.
+8DJ	.	.	.
+2E	.	.	.
+=27	=27	=27	=27
+[2F	-bis,	2r	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

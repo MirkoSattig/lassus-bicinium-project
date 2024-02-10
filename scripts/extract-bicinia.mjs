@@ -10,41 +10,41 @@ const pathToKernScores = `${__dirname}/../lassus-bicinia/kern/`;
 const biciniumYamlPath = `${__dirname}/../content/bicinia/`;
 
 const metadata = {
-    "01-beatus-vir": {
-        youtubeId: "yn9Mjzy4LYg",
+    '01-beatus-vir': {
+        youtubeId: 'yn9Mjzy4LYg',
     },
-    "02-beatus-homo": {
-        youtubeId: "wj_amDCDJZA",
+    '02-beatus-homo': {
+        youtubeId: 'wj_amDCDJZA',
     },
-    "03-oculus-non-vidit": {
-        youtubeId: "WKGZrdvp_CM",
+    '03-oculus-non-vidit': {
+        youtubeId: 'WKGZrdvp_CM',
     },
-    "04-justus-cor-suum-tradet": {
-        youtubeId: "wkJxdxX9rUc",
+    '04-justus-cor-suum-tradet': {
+        youtubeId: 'wkJxdxX9rUc',
     },
-    "05-exspectatio-justorum": {
-        youtubeId: "Kn5_VzzVJ_c",
+    '05-exspectatio-justorum': {
+        youtubeId: 'Kn5_VzzVJ_c',
     },
-    "06-qui-sequitur-me": {
-        youtubeId: "MQ7Qx5kbH_E",
+    '06-qui-sequitur-me': {
+        youtubeId: 'MQ7Qx5kbH_E',
     },
-    "07-justi-tulerunt-spolia": {
-        youtubeId: "JNxP7XS98x0",
+    '07-justi-tulerunt-spolia': {
+        youtubeId: 'JNxP7XS98x0',
     },
-    "08-sancti-mei": {
-        youtubeId: "9zMsQANKhcw",
+    '08-sancti-mei': {
+        youtubeId: '9zMsQANKhcw',
     },
-    "09-qui-vult-venire-post-me": {
-        youtubeId: "QK5at2mV5rI",
+    '09-qui-vult-venire-post-me': {
+        youtubeId: 'QK5at2mV5rI',
     },
-    "10-serve-bone": {
-        youtubeId: "5Cb3d69pbuM",
+    '10-serve-bone': {
+        youtubeId: '5Cb3d69pbuM',
     },
-    "11-fulgebunt-justi": {
-        youtubeId: "rB_Hbrb7wO4",
+    '11-fulgebunt-justi': {
+        youtubeId: 'rB_Hbrb7wO4',
     },
-    "12-sicut-rosa": {
-        youtubeId: "ADsX997bsLg",
+    '12-sicut-rosa': {
+        youtubeId: 'ADsX997bsLg',
     },
 };
 
@@ -86,6 +86,34 @@ function getFiles(directory, fileList) {
     return fileList;
 }
 
+function getFinalis(file) {
+    const stdout = execSync(`extract -f 1 ${file} | grep '^\\*[A-Ha-h]:'`);
+    const regex = new RegExp(/^\*([a-hA-H]):(\w{3})$/);
+    const matches = regex.exec(stdout.toString().trim());
+    return matches?.[1].toLowerCase() ?? null;
+}
+
+function getMode(file) {
+    const modeMapping = {
+        dor: 'dorian',
+        phr: 'phrygian',
+        lyd: 'lydian',
+        mix: 'mixolydian',
+        aeo: 'aeolian',
+        ion: 'ionian',
+        loc: 'locrian',
+    };
+    const stdout = execSync(`extract -f 1 ${file} | grep '^\\*[A-Ha-h]:'`);
+    const regex = new RegExp(/^\*([a-hA-H]):(\w{3})$/);
+    const matches = regex.exec(stdout.toString().trim());
+    return modeMapping[matches?.[2]] ?? null;
+}
+
+function getTransposition(file) {
+    const stdout = execSync(`extract -f 1 ${file} | grep '*k\\['`);
+    return stdout.toString().trim().split('\n')[0].replace('*clef', '') === '*k[b-]' ? 'cantus_mollis' : 'cantus_durus';
+}
+
 execSync(`mkdir -p ${biciniumYamlPath}`);
 
 getFiles(pathToKernScores).forEach(file => {
@@ -95,13 +123,16 @@ getFiles(pathToKernScores).forEach(file => {
     const kern = fs.readFileSync(file, 'utf8');
     const referenceRecords = parseHumdrumReferenceRecords(kern);
 
-    const config = {
+    const config = Object.assign({
         id,
         nr: parseInt(referenceRecords.ONM, 10),
         title: referenceRecords['OTL@@LA'],
         localRawFile: `/kern/lassus-bicinia/${id}.krn`,
-        youtubeId: metadata[id]?.youtubeId ?? null,
-    };
+        finalis: getFinalis(file),
+        mode: getMode(file),
+        transposition: getTransposition(file),
+        composer: 'Orlando di Lasso',
+    }, metadata[id] ?? {});
 
     const configFilename = `${id}.yaml`;
     fs.writeFileSync(`${biciniumYamlPath}${configFilename}`, yaml.dump(config, {

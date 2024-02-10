@@ -37,6 +37,19 @@ function tokenIsDataRecord(token, includeNullToken = false) {
     return !token.startsWith('!') && !token.startsWith('*') && !token.startsWith('=') && !(!includeNullToken && token === '.');
 }
 
+function addMclefInterpretations(file, kern) {
+    const mclefLine = execSync(`cat ${file}`).toString().split('\n').find((line) => line.includes('*mclef'));
+    if (mclefLine) {
+        kern = kern.split('\n').map(line => {
+            if (mclefLine && line.includes('*clef')) {
+                return `${line}\n${mclefLine}`;
+            }
+            return line;
+        }).join('\n');
+    }
+    return kern;
+}
+
 execSync(`rm -rf ${cadencesKernPath}`);
 execSync(`mkdir -p ${cadencesKernPath}`);
 execSync(`rm -rf ${cadencesYamlPath}`);
@@ -73,7 +86,8 @@ getFiles(pathToKernScores).forEach(file => {
                 const startLine = startLineIndex + 1;
                 const endLine = endLineIndex + 1;
 
-                const cadenceKern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
+                const kern = execSync(`cat ${file} | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending`).toString().trim();
+                const cadenceKern = addMclefInterpretations(file, kern);
                 const cadenceFilename = `${uuidv5(cadenceKern, UUID_NAMESPACE)}.krn`;
                 fs.writeFileSync(`${cadencesKernPath}${cadenceFilename}`, cadenceKern);
 

@@ -1,0 +1,23 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Bassus	*	*I"Tenor	*
+*I'B	*	*I'T	*
+*clefF3	*	*clefC3	*
+*mclefF4	*	*mclefGv2	*
+*k[]	*	*k[]	*
+*G:mix	*	*G:mix	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+1F	-de-	4e]	.
+.	.	4d	.
+.	.	2d.	.
+=6	=6	=6	=6
+1E	-lis,	.	.
+.	.	8cL	.
+.	.	8BJ	.
+.	.	2c	.
+2r	.	[2d	-lis,
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]

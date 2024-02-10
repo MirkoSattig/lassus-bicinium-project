@@ -1,0 +1,32 @@
+**kern	**text	**kern	**text
+*staff2	*staff2	*staff1	*staff1
+*I"Altus	*	*I"Cantus	*
+*I'A	*	*I'C	*
+*clefC2	*	*clefG2	*
+*mclefGv2	*	*mclefG2	*
+*k[]	*	*k[]	*
+*d:dor	*	*d:dor	*
+*M2/1	*	*M2/1	*
+*met(C|)	*	*met(C|)	*
+2e@	-mi-	{2g	qui
+=17	=17	=17	=17
+2d@	-num,	2a	fe-
+{2B	qui	2dd	-cit
+2c	fe-	2ee	il-
+2f	-cit	2a}	-lum,
+=18	=18	=18	=18
+2g	il-	2r@	.
+2c	-lum,	2ee@	et
+2r	.	2dd@	in
+2e	et	2cc@	con-
+=19	=19	=19	=19
+2d	in	2ff@	-spe-
+2c	con-	4ee@	.
+.	.	4dd@	.
+2f}	-spe-	[2cc@	.
+*-	*-	*-	*-
+!!!RDF**kern: l = terminal long
+!!!RDF**kern: i = editorial accidental
+!!!system-decoration: [(s1,s2)]
+!!!RDF**kern: @ = marked note, color=#ccc
+!!!RDF**kern: { = phrase, brack

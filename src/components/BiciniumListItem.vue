@@ -15,12 +15,14 @@ onMounted(async () => {
     }
     data.value = await response.text();
 });
+
+const { formattedScore } = useScoreFormatter(data);
 </script>
 
 <template>
     <UCard>
         <template v-slot:header>
-            <div class="text-xl font-medium leading-5 text-gray-800">
+            <div class="text-xl font-medium leading-5">
                 <NuxtLink :to="{ name: 'bicinium-id', params: { id: bicinium.id } }">
                     {{ `${bicinium.nr}. ${bicinium.title}` }}
                 </NuxtLink>
@@ -28,10 +30,9 @@ onMounted(async () => {
         </template>
         <div class="flex flex-col gap-4 mt-4">
             <VerovioCanvas
-                v-if="data"
-                :data="data"
+                v-if="formattedScore"
+                :data="formattedScore"
                 view-mode="horizontal"
-                :scale="35"
                 lazy
                 unload
                 :lazy-delay="100"

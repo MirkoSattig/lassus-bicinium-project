@@ -1,5 +1,9 @@
+composer: Orlando di Lasso
+finalis: g
 id: 10-serve-bone
 localRawFile: /kern/lassus-bicinia/10-serve-bone.krn
+mode: mixolydian
 nr: 10
 title: Serve bone
+transposition: cantus_durus
 youtubeId: 5Cb3d69pbuM
