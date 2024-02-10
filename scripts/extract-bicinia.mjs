@@ -10,41 +10,41 @@ const pathToKernScores = `${__dirname}/../lassus-bicinia/kern/`;
 const biciniumYamlPath = `${__dirname}/../content/bicinia/`;
 
 const metadata = {
-    "01-beatus-vir": {
-        youtubeId: "yn9Mjzy4LYg",
+    '01-beatus-vir': {
+        youtubeId: 'yn9Mjzy4LYg',
     },
-    "02-beatus-homo": {
-        youtubeId: "wj_amDCDJZA",
+    '02-beatus-homo': {
+        youtubeId: 'wj_amDCDJZA',
     },
-    "03-oculus-non-vidit": {
-        youtubeId: "WKGZrdvp_CM",
+    '03-oculus-non-vidit': {
+        youtubeId: 'WKGZrdvp_CM',
     },
-    "04-justus-cor-suum-tradet": {
-        youtubeId: "wkJxdxX9rUc",
+    '04-justus-cor-suum-tradet': {
+        youtubeId: 'wkJxdxX9rUc',
     },
-    "05-exspectatio-justorum": {
-        youtubeId: "Kn5_VzzVJ_c",
+    '05-exspectatio-justorum': {
+        youtubeId: 'Kn5_VzzVJ_c',
     },
-    "06-qui-sequitur-me": {
-        youtubeId: "MQ7Qx5kbH_E",
+    '06-qui-sequitur-me': {
+        youtubeId: 'MQ7Qx5kbH_E',
     },
-    "07-justi-tulerunt-spolia": {
-        youtubeId: "JNxP7XS98x0",
+    '07-justi-tulerunt-spolia': {
+        youtubeId: 'JNxP7XS98x0',
     },
-    "08-sancti-mei": {
-        youtubeId: "9zMsQANKhcw",
+    '08-sancti-mei': {
+        youtubeId: '9zMsQANKhcw',
     },
-    "09-qui-vult-venire-post-me": {
-        youtubeId: "QK5at2mV5rI",
+    '09-qui-vult-venire-post-me': {
+        youtubeId: 'QK5at2mV5rI',
     },
-    "10-serve-bone": {
-        youtubeId: "5Cb3d69pbuM",
+    '10-serve-bone': {
+        youtubeId: '5Cb3d69pbuM',
     },
-    "11-fulgebunt-justi": {
-        youtubeId: "rB_Hbrb7wO4",
+    '11-fulgebunt-justi': {
+        youtubeId: 'rB_Hbrb7wO4',
     },
-    "12-sicut-rosa": {
-        youtubeId: "ADsX997bsLg",
+    '12-sicut-rosa': {
+        youtubeId: 'ADsX997bsLg',
     },
 };
 
