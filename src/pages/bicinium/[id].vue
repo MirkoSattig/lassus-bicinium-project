@@ -13,7 +13,27 @@ onMounted(async () => {
     score.value = kern;
 });
 
-const { formattedScore } = useScoreFormatter(score);
+const { formattedScore, filterString } = useScoreFormatter(score);
+
+const downloadConfig = reactive({
+    orientation: 'portrait',
+    applyFilters: true,
+    scale: 88,
+    verovioSpacingSystem: 16,
+    verovioSpacingStaff: 12,
+});
+
+async function downloadPDF() {
+    const url = new URL(`${location.protocol}//${location.host}/api/bicinium/${bicinium.value.id}/pdf`);
+    url.searchParams.set('orientation', downloadConfig.orientation);
+    url.searchParams.set('scale', downloadConfig.scale);
+    url.searchParams.set('verovioSpacingSystem', downloadConfig.verovioSpacingSystem);
+    url.searchParams.set('verovioSpacingStaff', downloadConfig.verovioSpacingStaff);
+    if (downloadConfig.applyFilters) {
+        url.searchParams.set('filterString', filterString.value);
+    }
+    window.open(url, '_blank');
+}
 </script>
 
 <template>
@@ -41,7 +61,9 @@ const { formattedScore } = useScoreFormatter(score);
             <div class="flex items-center gap-4">
                 <ScoreOptions />
                 <div class="flex gap-2 ml-auto">
-                    <UButton :to="`/api/bicinium/${bicinium.id}/pdf`">Download PDF</UButton>
+                    <UButton @click="downloadPDF">
+                        Download PDF
+                    </UButton>
                     <UButton :to="`https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`" target="_blank">
                         Auf GitHub öffnen
                     </UButton>

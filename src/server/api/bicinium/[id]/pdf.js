@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
     const { id } = event.context.params;
     const {
         orientation,
-        prefix,
+        filterString,
         scale: scaleParam,
         verovioSpacingSystem,
         verovioSpacingStaff,
@@ -61,10 +61,10 @@ export default defineEventHandler(async (event) => {
         header: 'auto',
         footer: 'none',
         spacingSystem: verovioSpacingSystem || 16,
-        spacingStaff: verovioSpacingStaff || 14,
+        spacingStaff: verovioSpacingStaff || 12,
         svgCss: '.pgHead { fill: transparent; }',
     });
-    toolkit.loadData(`${prefix}\n${scoreData}`);
+    toolkit.loadData(`${scoreData}\n${filterString}`);
 
     const pageOptions = {
         fontCallback(family, bold, italic, fontOptions) {

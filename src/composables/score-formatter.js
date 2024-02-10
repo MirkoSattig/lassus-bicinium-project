@@ -2,15 +2,21 @@ export function useScoreFormatter(kern) {
     const options = useScoreOptions();
     const score = ref(kern);
 
-    const formattedScore = computed(() => {
-        let str = score.value?.trim();
+    const filterString = computed(() => {
+        const filters = [];
         if (options.modernClefs) {
-            str += `\n!!!filter: modori -m`;
+            filters.push('!!!filter: modori -m');
         }
-        return str ?? null;
+        return filters.join('\n');
+    });
+
+    const formattedScore = computed(() => {
+        if (!score.value) return null;
+        return `${score.value.trim()}\n${filterString.value}`;
     });
 
     return {
         formattedScore,
+        filterString,
     };
 };
