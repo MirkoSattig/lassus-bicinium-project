@@ -95,13 +95,12 @@ getFiles(pathToKernScores).forEach(file => {
     const kern = fs.readFileSync(file, 'utf8');
     const referenceRecords = parseHumdrumReferenceRecords(kern);
 
-    const config = {
+    const config = Object.assign({
         id,
         nr: parseInt(referenceRecords.ONM, 10),
         title: referenceRecords['OTL@@LA'],
         localRawFile: `/kern/lassus-bicinia/${id}.krn`,
-        youtubeId: metadata[id]?.youtubeId ?? null,
-    };
+    }, metadata[id] ?? {});
 
     const configFilename = `${id}.yaml`;
     fs.writeFileSync(`${biciniumYamlPath}${configFilename}`, yaml.dump(config, {
