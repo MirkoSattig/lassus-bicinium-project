@@ -1,8 +1,8 @@
 <script setup>
+const { conditions } = useBiciniumFilter();
 const { params: { id } } = useRoute();
 const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryContent(`/bicinia/${id}`).findOne());
-
-const { data: surroundData } = await useAsyncData(`bicinia/${id}/surround`, () => queryContent('/bicinia').only(['_path', 'id', 'nr']).findSurround(bicinium.value._path))
+const { data: surroundData } = await useAsyncData(`bicinia/${id}/surround`, () => queryContent('/bicinia').only(['_path', 'id', 'nr']).where(conditions.value).findSurround(bicinium.value._path))
 const [prevBicinium, nextBicinium] = surroundData.value;
 
 const score = ref();
