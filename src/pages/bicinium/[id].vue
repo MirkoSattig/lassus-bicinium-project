@@ -1,6 +1,16 @@
 <script setup>
 const { params: { id } } = useRoute();
 const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryContent(`/bicinia/${id}`).findOne());
+
+const score = ref();
+
+onMounted(async () => {
+    const response = await fetch(bicinium.value.localRawFile);
+    const kern = await response.text();
+    score.value = kern;
+});
+
+const { formattedScore } = useScoreFormatter(score);
 </script>
 
 <template>
@@ -19,9 +29,10 @@ const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryConten
                     </UButton>
                 </div>
             </div>
+
             <VerovioCanvas
-                :url="bicinium.localRawFile"
-                :scale="35"
+                v-if="formattedScore"
+                :data="formattedScore"
                 :options="{
                     spacingSystem: 15,
                 }"
