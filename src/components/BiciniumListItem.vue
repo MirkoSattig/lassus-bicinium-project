@@ -15,6 +15,8 @@ onMounted(async () => {
     }
     data.value = await response.text();
 });
+
+const { formattedScore } = useScoreFormatter(data);
 </script>
 
 <template>
@@ -28,8 +30,8 @@ onMounted(async () => {
         </template>
         <div class="flex flex-col gap-4 mt-4">
             <VerovioCanvas
-                v-if="data"
-                :data="data"
+                v-if="formattedScore"
+                :data="formattedScore"
                 view-mode="horizontal"
                 :scale="35"
                 lazy
