@@ -7,13 +7,17 @@ const { data: bicinium } = await useAsyncData(`bicinia/${id}`, () => queryConten
     <UContainer>
         <Heading>Bicinien</Heading>
         <div class="flex flex-col gap-4">
-            <div class="flex gap-2">
-                <UButton :to="`https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`" target="_blank">
-                    Auf GitHub öffnen
-                </UButton>
-                <UButton :to="`https://verovio.humdrum.org/?file=${encodeURIComponent(`verovio.https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`)}`" target="_blank">
-                    Im VHV öffnen
-                </UButton>
+
+            <div class="flex items-center gap-4">
+                <ScoreOptions />
+                <div class="flex gap-2 ml-auto">
+                    <UButton :to="`https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`" target="_blank">
+                        Auf GitHub öffnen
+                    </UButton>
+                    <UButton :to="`https://verovio.humdrum.org/?file=${encodeURIComponent(`https://github.com/MirkoSattig/lassus-bicinia/blob/master/kern/${bicinium.id}.krn`)}`" target="_blank">
+                        Im VHV öffnen
+                    </UButton>
+                </div>
             </div>
             <VerovioCanvas
                 :url="bicinium.localRawFile"

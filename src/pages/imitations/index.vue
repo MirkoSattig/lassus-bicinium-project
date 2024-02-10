@@ -10,6 +10,9 @@ function getBicinium(id) {
 <template>
     <UContainer>
         <Heading>Imitationen</Heading>
+        
+        <ScoreOptions />
+        
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div v-for="imitation in imitationData" :key="imitation.id">
                 <ImitationListItem :imitation="imitation" :bicinium="getBicinium(imitation.biciniumId)"/>
