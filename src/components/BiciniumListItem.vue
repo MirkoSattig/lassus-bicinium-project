@@ -33,7 +33,6 @@ const { formattedScore } = useScoreFormatter(data);
                 v-if="formattedScore"
                 :data="formattedScore"
                 view-mode="horizontal"
-                :scale="35"
                 lazy
                 unload
                 :lazy-delay="100"
