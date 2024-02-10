@@ -131,6 +131,7 @@ getFiles(pathToKernScores).forEach(file => {
         finalis: getFinalis(file),
         mode: getMode(file),
         transposition: getTransposition(file),
+        composer: 'Orlando di Lasso',
     }, metadata[id] ?? {});
 
     const configFilename = `${id}.yaml`;
