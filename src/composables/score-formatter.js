@@ -5,7 +5,7 @@ export function useScoreFormatter(kern) {
     const filterString = computed(() => {
         const filters = [];
         if (options.modernClefs) {
-            filters.push('!!!filter: modori -m');
+            filters.push('!!!filter: modori -m --no-mensuration');
         }
         return filters.join('\n');
     });
