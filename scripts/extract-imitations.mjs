@@ -105,19 +105,6 @@ function formatImitationKern(kern, upperStartBeat, upperEndBeat, lowerStartBeat,
     return formattedLines.join('\n');
 }
 
-function addMclefInterpretations(file, kern) {
-    const mclefLine = execSync(`cat ${file}`).toString().split('\n').find((line) => line.includes('*mclef'));
-    if (mclefLine) {
-        kern = kern.split('\n').map(line => {
-            if (mclefLine && line.includes('*clef')) {
-                return `${line}\n${mclefLine}`;
-            }
-            return line;
-        }).join('\n');
-    }
-    return kern;
-}
-
 execSync(`rm -rf ${imitationsKernPath}`);
 execSync(`mkdir -p ${imitationsKernPath}`);
 execSync(`rm -rf ${imitationsYamlPath}`);
@@ -169,8 +156,7 @@ getFiles(pathToKernScores).forEach(file => {
                 const endBeat = Math.max(upperEndBeat, lowerEndBeat);
                 
                 const formattedKern = formatImitationKern(kern, upperStartBeat, upperEndBeat, lowerStartBeat, lowerEndBeat);
-                const tmpKern = execSync(`echo ${escapeShell(formattedKern)} | extractxx -f 1-4 | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending | echo -ne "$(cat)" | cat - <(echo -e -n "\n!!!RDF**kern: @ = marked note, color=#ccc\n!!!RDF**kern: { = phrase, brack")`, { shell: '/bin/bash' }).toString().trim();
-                const imitationKern = addMclefInterpretations(file, tmpKern);
+                const imitationKern = execSync(`echo ${escapeShell(formattedKern)} | extractxx -f 1-4 | myank -I -l ${startLine}-${endLine} --hide-starting --hide-ending | echo -ne "$(cat)" | cat - <(echo -e -n "\n!!!RDF**kern: @ = marked note, color=#ccc\n!!!RDF**kern: { = phrase, brack")`, { shell: '/bin/bash' }).toString().trim();
                 const imitationFilename = `${uuidv5(imitationKern, UUID_NAMESPACE)}.krn`;
                 fs.writeFileSync(`${imitationsKernPath}${imitationFilename}`, imitationKern);
 
